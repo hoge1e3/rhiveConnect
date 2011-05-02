@@ -1,0 +1,19 @@
+<html>
+<script src=jquery-1.4.2.min.js>
+</script>
+<script>
+$(function ($) {
+  var ap=$("#ap")[0];
+  /*ap.put("onTimer", function (x) {
+    $("#res").append("A");
+  })*/
+  alert( ap.asyncEval(" x=5; ") );
+});
+</script>
+<body>
+<applet code=jp.tonyu.rhiveconnect.RCApplet.class archive="org.mozilla.javascript.jar,rc.jar" 
+   width="200" height="200" id="ap" >
+</applet>
+<span id=res></span>
+</body>
+</html>
